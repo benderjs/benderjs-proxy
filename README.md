@@ -1,4 +1,4 @@
-# benderjs-jquery
+# benderjs-proxy
 
 ## Installation
 
