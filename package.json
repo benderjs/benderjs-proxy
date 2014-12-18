@@ -25,6 +25,7 @@
     "jshint": "^2.5.3"
   },
   "dependencies": {
-    "http-proxy": "^1.7.3"
+    "http-proxy": "^1.7.3",
+    "minimatch": "^2.0.1"
   }
 }
