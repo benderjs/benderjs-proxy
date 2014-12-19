@@ -27,7 +27,13 @@ You can configure proxy in `bender.js` configuration file.
 var config = {
 	proxy: {
 		// Below option will redirect all requests from http://127.0.0.1:1030/google to http://google.com
-		'/google': 'http://google.com'
+		'/google': 'http://google.com',
+		
+		// To make things more flexible, there is a possibility to pass a function which will define a target into proxy.
+		// There is a one parameter passed into function which is parsed request url using node url.parse function.
+		'some-thing': function( url ) {
+			return 'http://example.com/some/thing' + ( url.search || '' )
+		}
 	}
 };
 
