@@ -1,6 +1,6 @@
 # benderjs-proxy
 
-[node-http-proxy](https://github.com/nodejitsu/node-http-proxy) wrapper for bender. Especially useful for Cross-Origin testing with bender.
+[node-http-proxy](https://github.com/nodejitsu/node-http-proxy) wrapper for Bender.js. Especially useful for testing Cross-Origin requests.
 
 ## Installation
 
@@ -25,14 +25,15 @@ module.exports = config;
 You can configure proxy in `bender.js` configuration file.
 ```javascript
 var config = {
+    (...)
+
 	proxy: {
-		// Below option will redirect all requests from http://127.0.0.1:1030/google to http://google.com
+		// Below configuration will redirect all requests from http://<bender_host>:<bender_port>/google to http://google.com
 		'/google': 'http://google.com',
 		
-		// To make things more flexible, there is a possibility to pass a function which will define a target into proxy.
-		// There is a one parameter passed into function which is parsed request url using node url.parse function.
-		'some-thing': function( url ) {
-			return 'http://example.com/some/thing' + ( url.search || '' )
+        // You can also pass a function as a proxy target, it will receive a URL object produced using Node's url.parse() method
+		'/foobar': function( url ) {
+			return 'http://example.com/foo/bar' + ( url.search || '' );
 		}
 	}
 };
