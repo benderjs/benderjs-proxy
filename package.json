@@ -1,7 +1,7 @@
 {
   "name": "benderjs-proxy",
-  "version": "0.0.1",
-  "description": "Adapter for YUI3 testing framework for Bender.js",
+  "version": "0.1.0",
+  "description": "HTTP proxy for Bender.js",
   "keywords": [
     "bender",
     "benderjs",

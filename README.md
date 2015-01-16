@@ -1,6 +1,6 @@
 # benderjs-proxy
 
-[node-http-proxy](https://github.com/nodejitsu/node-http-proxy) wrapper for Bender.js. Especially useful for testing Cross-Origin requests.
+HTTP proxy for Bender.js using [node-http-proxy](https://github.com/nodejitsu/node-http-proxy). Especially useful for testing Cross-Origin requests.
 
 ## Installation
 
